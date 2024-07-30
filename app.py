@@ -7,6 +7,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ecommerce.db'
 
 db = SQLAlchemy(app)
 
+# Modelagem
+
+# Produto (id, name, price, description)
+
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+
 @app.route('/')
 def hello_world():
     return 'Hello World!'
